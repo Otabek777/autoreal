@@ -818,9 +818,6 @@ ul, ol {
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     transform: translateX(-50%); }
-    .car_buyback .car .line {
-      -webkit-animation: ball  6s infinite linear;
-      animation: ball  6s infinite linear; }
     .car_buyback .car .img {
       position: absolute;
       top: 50%;
