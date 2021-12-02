@@ -42,6 +42,9 @@ ul, ol {
   height: 112px;
   background: #F5F7F9; }
 
+.header__logo .white {
+  display: none; }
+
 .header__container {
   max-width: 1760px;
   height: 100%;
@@ -860,7 +863,9 @@ ul, ol {
   justify-content: space-between;
   max-width: 1375px;
   width: 100%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  position: relative;
+  z-index: 1; }
 
 .car_buyback__block {
   margin-bottom: 40px; }
@@ -1831,7 +1836,19 @@ ul, ol {
   .car_buyback__right {
     width: 122px; }
   .car_buyback {
-    padding-bottom: 335px; }
+    padding-bottom: 80px; }
+  .car_buyback__left .car_buyback__block {
+    margin-bottom: 80px; }
+  .car_buyback__left .car_buyback__block:nth-child(2) {
+    -webkit-transform: translateX(-20px);
+    -ms-transform: translateX(-20px);
+    transform: translateX(-20px); }
+  .car_buyback__right .car_buyback__block {
+    margin-bottom: 80px; }
+  .car_buyback__right .car_buyback__block:nth-child(2) {
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px); }
   .car_buyback .car {
     bottom: 10px; }
   .car_buyback .h3 {
@@ -1963,13 +1980,89 @@ ul, ol {
   .address__wrap .phone div {
     margin-bottom: 8px; } }
 
+.btn_burgir {
+  display: none; }
+
 @media screen and (max-width: 1040px) {
+  .car_buyback .car {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .car_buyback .car .img {
+      width: 100%;
+      text-align: center; }
+      .car_buyback .car .img img {
+        width: 50%; }
+    .car_buyback .car .line {
+      width: 80%; }
+  .car_buyback .h3 {
+    margin-bottom: 250px; }
   .header {
     height: 128px; }
   .header__phone {
     margin-bottom: 0; }
   .header__navbar {
-    display: none; }
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    background: #D30B12 url(../img/line-header.png) no-repeat bottom;
+    background-size: 100%;
+    -webkit-box-shadow: 0px 32px 40px rgba(243, 15, 0, 0.15);
+    box-shadow: 0px 32px 40px rgba(243, 15, 0, 0.15);
+    border-top: 1px solid #F5F7F9;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    position: absolute;
+    top: 128px;
+    left: 0;
+    z-index: 111;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    padding-top: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear; }
+    .header__navbar li {
+      width: 100%;
+      height: auto; }
+      .header__navbar li a {
+        height: auto;
+        margin: 0;
+        padding: 0;
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 130%;
+        color: #fff;
+        margin-bottom: 56px; }
+      .header__navbar li a:hover {
+        text-decoration: underline;
+        color: #fff; }
+    .header__navbar li:nth-child(2) a {
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
+    .header__navbar li:nth-child(3) a {
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
+      justify-content: flex-end; }
+    .header__navbar li:nth-child(4) a {
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
+  .header.active .header__navbar {
+    height: 820px;
+    padding-top: 54px; }
   .header__box {
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -2109,11 +2202,198 @@ ul, ol {
     border-top: 1px solid #F5F7F9;
     padding: 24px 0; }
   .footer__right {
-    width: 50%; } }
+    width: 50%; }
+  .btn_burgir {
+    display: block;
+    width: 48px;
+    height: 48px;
+    border: none;
+    background-color: transparent;
+    position: relative;
+    -webkit-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    border-radius: 50%;
+    margin-right: 48px; }
+    .btn_burgir span {
+      display: block;
+      width: 46px;
+      height: 4px;
+      background: #F22E2F;
+      -webkit-transform: skewX(-45deg);
+      -ms-transform: skewX(-45deg);
+      transform: skewX(-45deg); }
+    .btn_burgir span:nth-child(1) {
+      position: absolute;
+      top: 14px;
+      left: 50%;
+      -webkit-transform: translateX(-50%) skewX(-45deg);
+      -ms-transform: translateX(-50%) skewX(-45deg);
+      transform: translateX(-50%) skewX(-45deg);
+      -webkit-transition: all 0.2s ease;
+      -o-transition: all 0.2s ease;
+      transition: all 0.2s ease; }
+    .btn_burgir span:nth-child(2) {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%) skewX(-45deg);
+      -ms-transform: translate(-50%, -50%) skewX(-45deg);
+      transform: translate(-50%, -50%) skewX(-45deg);
+      -webkit-transition: all 0.2s ease;
+      -o-transition: all 0.2s ease;
+      transition: all 0.2s ease; }
+    .btn_burgir span:nth-child(3) {
+      position: absolute;
+      bottom: 14px;
+      left: 50%;
+      -webkit-transform: translateX(-50%) skewX(-45deg);
+      -ms-transform: translateX(-50%) skewX(-45deg);
+      transform: translateX(-50%) skewX(-45deg);
+      -webkit-transition: all 0.2s ease;
+      -o-transition: all 0.2s ease;
+      transition: all 0.2s ease; }
+  .header.active {
+    background: #D30B12; }
+    .header.active .header__navbar {
+      display: block; }
+    .header.active .header__logo img {
+      display: none; }
+    .header.active .header__logo .white {
+      display: block; }
+    .header.active .header__phone {
+      border: 1px solid #fff;
+      color: #fff; }
+      .header.active .header__phone svg path {
+        fill: #fff; }
+    .header.active .btn_burgir {
+      -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      transform: rotate(180deg); }
+      .header.active .btn_burgir span {
+        background: #fff; }
+      .header.active .btn_burgir span:nth-child(1) {
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%) rotate(45deg) skewX(-45deg);
+        -ms-transform: translate(-50%, -50%) rotate(45deg) skewX(-45deg);
+        transform: translate(-50%, -50%) rotate(45deg) skewX(-45deg); }
+      .header.active .btn_burgir span:nth-child(3) {
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%) rotate(-45deg) skewX(-45deg);
+        -ms-transform: translate(-50%, -50%) rotate(-45deg) skewX(-45deg);
+        transform: translate(-50%, -50%) rotate(-45deg) skewX(-45deg); }
+      .header.active .btn_burgir span:nth-child(2) {
+        opacity: 0; }
+  .car_buyback__block {
+    position: relative; }
+    .car_buyback__block p {
+      width: 341px;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 130%;
+      color: #FFFFFF;
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      background: #D30B12;
+      border-radius: 4px;
+      padding: 8px 32px; }
+  .car_buyback__block:hover p {
+    display: block; }
+  .car_buyback__left .car_buyback__block p {
+    left: 140px;
+    text-align: start; }
+  .car_buyback__left:hover {
+    position: relative;
+    z-index: 9; }
+  .car_buyback__right .car_buyback__block p {
+    right: 140px;
+    text-align: start; } }
 
 @media screen and (max-width: 767px) {
+  .car_buyback__block {
+    position: relative; }
+    .car_buyback__block p {
+      width: 217px;
+      font-size: 16px;
+      line-height: 130%;
+      padding: 4px 16px;
+      z-index: 9; }
+  .car_buyback__block.active {
+    position: relative;
+    z-index: 9; }
+  .car_buyback__left.active {
+    position: relative;
+    z-index: 9; }
+  .car_buyback__left .car_buyback__block p {
+    left: 113px; }
+  .car_buyback__right.active {
+    position: relative;
+    z-index: 9; }
+  .car_buyback__left .car_buyback__block p {
+    right: 113px; }
   .container {
     padding: 0 10px; }
+  .car_buyback .car {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .car_buyback .car .img {
+      width: 60%; }
+      .car_buyback .car .img img {
+        width: 100%; }
+  .car_buyback {
+    padding-bottom: 0px; }
+  .car_buyback .h3 {
+    margin-bottom: 24px; }
+  .car_buyback__left {
+    width: 100px; }
+    .car_buyback__left .car_buyback__block {
+      margin-bottom: 40px; }
+    .car_buyback__left .car_buyback__block:nth-child(2) {
+      -webkit-transform: translateX(-20px);
+      -ms-transform: translateX(-20px);
+      transform: translateX(-20px); }
+  .car_buyback__right {
+    width: 100px; }
+    .car_buyback__right .car_buyback__block {
+      margin-bottom: 40px; }
+    .car_buyback__right .car_buyback__block:nth-child(2) {
+      -webkit-transform: translateX(20px);
+      -ms-transform: translateX(20px);
+      transform: translateX(20px); }
+  .car_buyback .car .line {
+    width: 80%; }
+  .car_buyback__block h5 {
+    font-size: 28px;
+    line-height: 130%; }
+  .header__navbar {
+    top: 96px;
+    height: 0;
+    padding-top: 0;
+    padding-left: 10px;
+    padding-right: 10px; }
+    .header__navbar li a {
+      font-size: 28px;
+      line-height: 130%;
+      margin-bottom: 32px;
+      -webkit-box-pack: start !important;
+      -ms-flex-pack: start !important;
+      justify-content: flex-start !important; }
+    .header__navbar li:nth-child(2n) a {
+      -webkit-box-pack: end !important;
+      -ms-flex-pack: end !important;
+      justify-content: flex-end !important; }
+  .header.active .header__navbar {
+    height: 455px;
+    padding-top: 47px; }
   .header {
     height: 96px;
     position: relative; }
