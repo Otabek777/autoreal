@@ -9,8 +9,6 @@ document.querySelector('.btn_burgir').addEventListener('click', function() {
     document.querySelector('.header').classList.toggle('active');
 });
 
-
-
 $(window).scroll(function() {
     let st = $(this).scrollTop();
 

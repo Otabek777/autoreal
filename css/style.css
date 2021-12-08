@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -10,7 +10,7 @@
   outline: none; }
 
 body {
-  font-family: 'Open Sans', sans-serif; }
+  font-family: 'Montserrat', sans-serif; }
 
 button {
   cursor: pointer; }
@@ -79,7 +79,7 @@ ul, ol {
       -ms-flex-align: center;
       align-items: center;
       height: 100%;
-      font-weight: 600;
+      font-weight: normal;
       font-size: 18px;
       line-height: 22px;
       color: #0B1F35;
@@ -348,7 +348,7 @@ ul, ol {
       color: #0B1F35;
       margin-bottom: 32px; }
     .banner__content .block p {
-      font-weight: 700;
+      font-weight: normal;
       font-size: 18px;
       line-height: 145%;
       color: #3D3D3D;
@@ -446,7 +446,8 @@ ul, ol {
       z-index: 1; }
 
 .number {
-  padding-top: 120px; }
+  padding-top: 120px;
+  padding-bottom: 160px; }
   .number .h2 {
     font-weight: 600;
     font-size: 40px;
@@ -464,6 +465,40 @@ ul, ol {
     text-align: center;
     color: #0B1F35;
     margin-bottom: 64px; }
+
+.number_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .number_btn .btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border: none;
+    width: 260px;
+    height: 48px;
+    background: #F22E2F;
+    -webkit-box-shadow: 0px 15px 30px rgba(255, 10, 33, 0.15), inset 0px -2px 20px rgba(205, 0, 11, 0.33);
+    box-shadow: 0px 15px 30px rgba(255, 10, 33, 0.15), inset 0px -2px 20px rgba(205, 0, 11, 0.33);
+    border-radius: 16px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+    color: #FFFFFF;
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear; }
+  .number_btn .btn:hover {
+    background: #D30B12; }
 
 .number__box {
   display: -webkit-box;
@@ -752,9 +787,9 @@ ul, ol {
     max-width: 928px;
     width: 100%;
     margin: 0 auto;
-    -webkit-transform: translateY(3px);
-    -ms-transform: translateY(3px);
-    transform: translateY(3px); }
+    -webkit-transform: translateY(5px);
+    -ms-transform: translateY(5px);
+    transform: translateY(5px); }
   .questions__bottom .block {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1700,6 +1735,8 @@ ul, ol {
   display: none; }
 
 @media screen and (max-width: 1400px) {
+  .number_btn {
+    margin-top: 26px; }
   section {
     display: none; }
   .container {
@@ -1721,10 +1758,11 @@ ul, ol {
     -ms-flex-order: 1;
     order: 1;
     margin-left: auto;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center; }
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
     .header__navbar li a {
+      padding: 0 20px;
       padding-bottom: 38px; }
   .header__phone {
     margin-bottom: 28px; }
@@ -1978,12 +2016,41 @@ ul, ol {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
   .address__wrap .phone div {
-    margin-bottom: 8px; } }
+    margin-bottom: 8px; }
+  .car_buyback__block {
+    position: relative; }
+    .car_buyback__block p {
+      width: 341px;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 130%;
+      color: #FFFFFF;
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      background: #D30B12;
+      border-radius: 4px;
+      padding: 8px 32px; }
+  .car_buyback__block:hover p {
+    display: block; }
+  .car_buyback__left .car_buyback__block p {
+    left: 140px;
+    text-align: start; }
+  .car_buyback__left:hover {
+    position: relative;
+    z-index: 9; }
+  .car_buyback__right .car_buyback__block p {
+    right: 140px;
+    text-align: start; } }
 
 .btn_burgir {
   display: none; }
 
-@media screen and (max-width: 1040px) {
+@media screen and (max-width: 1020px) {
+  .number_btn {
+    margin-top: 10px; }
   .car_buyback .car {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1999,7 +2066,7 @@ ul, ol {
     .car_buyback .car .line {
       width: 80%; }
   .car_buyback .h3 {
-    margin-bottom: 250px; }
+    margin-bottom: 60px; }
   .header {
     height: 128px; }
   .header__phone {
@@ -2166,12 +2233,14 @@ ul, ol {
     height: 363px; }
   .trade_in {
     padding-top: 120px;
-    padding-bottom: 120px; }
+    padding-bottom: 88px; }
+  .stock {
+    padding-top: 515px; }
   .stock__block {
     width: 100%; }
   .stock .car {
     width: 95%;
-    top: 112px; }
+    top: 50px; }
   .fire-mobile {
     left: -14px; }
   .address__right iframe {
@@ -2263,9 +2332,10 @@ ul, ol {
       display: block; }
     .header.active .header__phone {
       border: 1px solid #fff;
-      color: #fff; }
+      color: #F22E2F;
+      background-color: #fff; }
       .header.active .header__phone svg path {
-        fill: #fff; }
+        fill: #F22E2F; }
     .header.active .btn_burgir {
       -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
@@ -2315,6 +2385,8 @@ ul, ol {
     text-align: start; } }
 
 @media screen and (max-width: 767px) {
+  .number_btn {
+    margin-top: 8px; }
   .car_buyback__block {
     position: relative; }
     .car_buyback__block p {
@@ -2476,7 +2548,8 @@ ul, ol {
   .banner__block .block p {
     margin-bottom: 32px; }
   .number {
-    padding-top: 64px; }
+    padding-top: 64px;
+    padding-bottom: 88px; }
   .number .h2 {
     font-size: 28px;
     line-height: 130%;
@@ -2765,4 +2838,23 @@ ul, ol {
     -ms-flex-pack: start;
     justify-content: flex-start;
     margin-top: 32px;
-    margin-bottom: 40px; } }
+    margin-bottom: 40px; }
+  .car_buyback .h2 {
+    font-size: 28px;
+    line-height: 130%;
+    margin-bottom: 16px; }
+  .questions {
+    padding-bottom: 0; }
+  .car_buyback {
+    padding-top: 88px; }
+  .car_buyback__container {
+    height: 298px; }
+  .car_buyback__block p {
+    font-size: 15px;
+    width: 200px; }
+  .car_buyback__right .car_buyback__block p {
+    right: 113px; }
+  .car_buyback .h3 {
+    font-size: 18px;
+    line-height: 130%;
+    margin-bottom: 0; } }
