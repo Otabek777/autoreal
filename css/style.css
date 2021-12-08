@@ -88,6 +88,8 @@ ul, ol {
       -webkit-transition: all 0.2s linear;
       -o-transition: all 0.2s linear;
       transition: all 0.2s linear; }
+      .header__navbar li a span {
+        display: none; }
     .header__navbar li a:hover {
       color: #D30B12; }
     .header__navbar li a::after {
@@ -522,7 +524,23 @@ ul, ol {
   overflow: hidden;
   -webkit-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
-  transition: all 0.3s linear; }
+  transition: all 0.3s linear;
+  position: relative; }
+  .number__block .line {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden; }
+    .number__block .line .line_box {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      width: 640px; }
   .number__block h5 {
     font-weight: 600;
     font-size: 24px;
@@ -544,6 +562,12 @@ ul, ol {
     -webkit-transition: all 0.3s linear;
     -o-transition: all 0.3s linear;
     transition: all 0.3s linear; }
+
+.number__block:nth-child(1) .line {
+  width: 30%; }
+
+.number__block:nth-child(2) .line {
+  width: 70%; }
 
 .number__block3 {
   width: 547px; }
@@ -1890,7 +1914,7 @@ ul, ol {
   .car_buyback .car {
     bottom: 10px; }
   .car_buyback .h3 {
-    margin-bottom: 80px; }
+    margin-bottom: 250px; }
   .red_line {
     display: block; }
     .red_line .left, .red_line .right {
@@ -2043,14 +2067,53 @@ ul, ol {
     z-index: 9; }
   .car_buyback__right .car_buyback__block p {
     right: 140px;
-    text-align: start; } }
+    text-align: start; }
+  .address__left {
+    overflow: hidden; } }
 
-.btn_burgir {
+.btn_burgir, .partners__slider, .partners__slider2, .partners__slider_btn {
   display: none; }
 
 @media screen and (max-width: 1020px) {
+  .partners__slider_btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .partners__slider_btn .btn {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      width: 260px;
+      height: 48px;
+      background: #F22E2F;
+      -webkit-box-shadow: 0px 15px 30px rgba(255, 10, 33, 0.15), inset 0px -2px 20px rgba(205, 0, 11, 0.33);
+      box-shadow: 0px 15px 30px rgba(255, 10, 33, 0.15), inset 0px -2px 20px rgba(205, 0, 11, 0.33);
+      border-radius: 16px;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 140%;
+      color: #FFFFFF;
+      border: none;
+      -webkit-transition: all 0.2s linear;
+      -o-transition: all 0.2s linear;
+      transition: all 0.2s linear; }
+    .partners__slider_btn .btn:hover {
+      background: #D30B12; }
+  .car_buyback__left .car_buyback__block:nth-child(1) p {
+    display: block; }
   .number_btn {
     margin-top: 10px; }
+  .car_buyback .h3 {
+    margin-bottom: 80px; }
   .car_buyback .car {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2101,29 +2164,39 @@ ul, ol {
     -o-transition: all 0.2s linear;
     transition: all 0.2s linear; }
     .header__navbar li {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
       width: 100%;
       height: auto; }
       .header__navbar li a {
+        display: inline-block;
         height: auto;
         margin: 0;
         padding: 0;
         font-weight: 600;
-        font-size: 48px;
+        font-size: 54px;
         line-height: 130%;
         color: #fff;
-        margin-bottom: 56px; }
+        margin-bottom: 56px;
+        position: relative;
+        color: rgba(0, 0, 0, 0);
+        font-size: 50px;
+        text-decoration: none;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #fff; }
       .header__navbar li a:hover {
         text-decoration: underline;
         color: #fff; }
-    .header__navbar li:nth-child(2) a {
+    .header__navbar li:nth-child(2) {
       -webkit-box-pack: center;
       -ms-flex-pack: center;
       justify-content: center; }
-    .header__navbar li:nth-child(3) a {
+    .header__navbar li:nth-child(3) {
       -webkit-box-pack: end;
       -ms-flex-pack: end;
       justify-content: flex-end; }
-    .header__navbar li:nth-child(4) a {
+    .header__navbar li:nth-child(4) {
       -webkit-box-pack: center;
       -ms-flex-pack: center;
       justify-content: center; }
@@ -2382,11 +2455,62 @@ ul, ol {
     z-index: 9; }
   .car_buyback__right .car_buyback__block p {
     right: 140px;
-    text-align: start; } }
+    text-align: start; }
+  .car_buyback__container:hover .car_buyback__left .car_buyback__block:nth-child(1) p {
+    display: none; }
+  .car_buyback__container:hover .car_buyback__left .car_buyback__block:nth-child(1):hover p {
+    display: block; }
+  .partners__box {
+    display: none; }
+  .partners__slider, .partners__slider2 {
+    display: block;
+    margin-bottom: 24px; }
+  .partners__slick {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 140px;
+    background: #FFFFFF;
+    -webkit-box-shadow: 0px 15px 30px rgba(238, 241, 243, 0.2);
+    box-shadow: 0px 15px 30px rgba(238, 241, 243, 0.2);
+    border-radius: 4px;
+    margin-right: 24px;
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    border: 1px solid #FFFFFF; }
+    .partners__slick img {
+      width: auto;
+      height: 75px;
+      margin: 0; }
+  .partners__slick:hover {
+    border: 1px solid #D30B12;
+    -webkit-box-shadow: 0px 15px 30px rgba(255, 10, 33, 0.15);
+    box-shadow: 0px 15px 30px rgba(255, 10, 33, 0.15); }
+  .partners .container {
+    padding: 0; } }
 
 @media screen and (max-width: 767px) {
+  .partners__slider .partners__slick {
+    -webkit-transform: translateX(100px);
+    -ms-transform: translateX(100px);
+    transform: translateX(100px); }
   .number_btn {
     margin-top: 8px; }
+  .banner__block .banner__content .block .h1 {
+    font-size: 32px;
+    line-height: 120%; }
+  .trade_in__block.btn {
+    padding: 18px !important; }
+  .partners .h2, .address__wrap h2 {
+    font-size: 28px;
+    line-height: 130%; }
   .car_buyback__block {
     position: relative; }
     .car_buyback__block p {
