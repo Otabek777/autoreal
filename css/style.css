@@ -1758,13 +1758,13 @@ ul, ol {
 .fire-mobile {
   display: none; }
 
-@media screen and (max-width: 1441px) {
+@media screen and (max-width: 1450px) {
   .red_line .left {
     left: -150px; }
   .red_line .right {
     right: -150px; }
   .address__left {
-    max-width: 680px;
+    min-width: 680px;
     width: 680px; } }
 
 @media screen and (max-width: 1400px) {
