@@ -1755,10 +1755,26 @@ ul, ol {
   .footer__right img {
     margin-left: 16px; }
 
-.stock__block .fire-mobile {
+.fire-mobile {
   display: none; }
 
+@media screen and (max-width: 1441px) {
+  .red_line .left {
+    left: -150px; }
+  .red_line .right {
+    right: -150px; }
+  .address__left {
+    max-width: 680px;
+    width: 680px; } }
+
 @media screen and (max-width: 1400px) {
+  .criteria__left {
+    position: relative; }
+  .criteria__left .block {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 20px;
+    left: 0; }
   .number_btn {
     margin-top: 26px; }
   section {
@@ -2062,9 +2078,15 @@ ul, ol {
   .car_buyback__left .car_buyback__block p {
     left: 140px;
     text-align: start; }
+  .car_buyback__left {
+    position: relative;
+    z-index: 9; }
   .car_buyback__left:hover {
     position: relative;
     z-index: 9; }
+  .car_buyback__right:hover {
+    position: relative;
+    z-index: 10; }
   .car_buyback__right .car_buyback__block p {
     right: 140px;
     text-align: start; }
@@ -2507,7 +2529,7 @@ ul, ol {
     font-size: 32px;
     line-height: 120%; }
   .trade_in__block.btn {
-    padding: 18px !important; }
+    padding: 0 40px !important; }
   .partners .h2, .address__wrap h2 {
     font-size: 28px;
     line-height: 130%; }
